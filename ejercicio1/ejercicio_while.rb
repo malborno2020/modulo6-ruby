@@ -50,34 +50,60 @@
 # matar a monstruo de 500 HP | 8 pares y 6 impares ⚔
 
 
-vida = 100
-operacion_impar = 0
-operacion_par = 0
+# vida = 100
+# operacion_impar = 0
+# operacion_par = 0
 
 
-while vida != 0
-    puts "ingrese vida"
-    vida = gets.chomp.to_i
-    if vida >= 100 && vida <= 500
-        while vida > 0
-            if vida % 2 != 0
-                vida -= 1
-                operacion_impar += 1 
-            else
-                vida /= 2
-                operacion_par += 1
-            end
-        end
-        puts "el monstruo ha muerto"
-        puts "operaciones impares para matar al monstruo: #{operacion_impar}"
-        puts "operaciones impares para matar al monstruo: #{operacion_par}"
-    else
-        puts "El monstruo ya está muerto o no es un monstruo válido para este juego. 
-        Por favor ingresa un numero de vidas entre
-         100 y 500"
+#     puts "ingrese vida"
+#     vida = gets.chomp.to_i
+#     if vida >= 100 && vida <= 500
+#         while vida > 0
+#             if vida % 2 != 0
+#                 vida -= 1
+#                 operacion_impar += 1 
+#             else
+#                 vida /= 2
+#                 operacion_par += 1
+#             end
+#         end
+#         puts "felicitaciones!! has matado el monstruo"
+#         puts "operaciones impares para matar al monstruo: #{operacion_impar}"
+#         puts "operaciones impares para matar al monstruo: #{operacion_par}"
+#     else
+#         puts "El monstruo ya está muerto o no es un monstruo válido para este juego. 
+#         Por favor ingresa un numero de vidas entre
+#          100 y 500"
+#     end
+
+
+
+# Ejercicio 4 Adivinanzas
+
+# Generar un número de forma aleatoria entre 1 y 20. 
+# Utilizar la consola para solicitar al usuario que
+#  adivine el número generado, si el usuario ingresa
+#   un número menor deberá imprimir "muy abajo"
+#    y si el número ingresado es mayor imprimir "muy arriba".
+#  Si el usuario adivina, deberá mostrar un mensaje de felicitaciones.
+# Ejemplo
+# 20
+# => muy arriba
+# 5
+# => muy abajo
+# 8
+# => Felicidades, el número era 8
+
+numero = rand(1..20)
+adivinanza = rand (21..30)
+
+while adivinanza != numero
+    puts "ingresa un numero"
+adivinanza = gets.chomp.to_i
+    if adivinanza > numero
+        puts "=> muy arriba"
+    elsif
+        puts "=> muy abajo"
     end
-    vida = 0
 end
-
-Ejercicio
-
+puts "felicitaciones! advinaste el que el número era #{numero}"

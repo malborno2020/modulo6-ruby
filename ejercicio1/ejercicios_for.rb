@@ -18,17 +18,27 @@
 # puts "Ingresa un número"
 # n = gets.chomp.to_i
 # index = 0
+# lista = "=>"
 
 # if n%2 == 0
 #     for index in 0..n
-#         print "#{index}_".chomp
+#         if index % 2 == 0
+#             if index != n
+#                 lista += "#{index}_"
+#             else
+#                 lista += index.to_s
+#             end
+#         end
 #     end
 # else
 #     for index in 0..n
-#         print "#{index}$".chomp
+#         if index % 2 != 0
+#             lista += "$#{index}"
+#         end
 #     end
 # end
-
+# puts "n = #{n}"
+# puts lista
 
 
 # Ejercicio 2 Sorteos para una rifa 🎁
@@ -70,13 +80,15 @@ min = gets.chomp.to_i
 puts "Finalmente ingresa cantidad de números a generar?"
 generar = gets.chomp.to_i
 
+generado = rand(index)
 for index in 1..generar
-    generado = rand(index)
     if generado >= min && generado <= max
         puts "Sorteo Nº#{index} #{generado}"
-        index += 1
+        generado = rand(index)    
     else
-        index += 1   
+        while generado < min && generado > max
+            generado = rand(index)
+        end
     end
 end
 
@@ -92,15 +104,15 @@ end
 
 # => 1 * 2 * 3 * 4 * 5 = 120
 
-puts "por favor ingresa un número?"
-n = gets.chomp.to_i
-index = 1
-factorial = 1
-operacion = ""
+# puts "por favor ingresa un número?"
+# n = gets.chomp.to_i
+# index = 1
+# factorial = 1
+# operacion = ""
 
-for index in 1..n
-    factorial = factorial * index
-    operación = operacion + "#{index.to_s} * "
-end
-puts "n = #{index}"
-puts "=> #{operacion} = #{factorial}"
+# for index in 1..n
+#     factorial = factorial * index
+#     operacion = operacion + "#{index.to_s} * "
+# end
+# puts "n = #{index}"
+# puts "=> #{operacion} = #{factorial}"

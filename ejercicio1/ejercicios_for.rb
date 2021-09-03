@@ -21,11 +21,11 @@
 
 # if n%2 == 0
 #     for index in 0..n
-#         puts "#{index}_".chomp
+#         print "#{index}_".chomp
 #     end
 # else
 #     for index in 0..n
-#         puts "#{index}$".chomp
+#         print "#{index}$".chomp
 #     end
 # end
 
@@ -58,27 +58,27 @@
 # => Sorteo N°3: 5
 
 
-# max = 0
-# min = 0
-# generar = 0
-# index = 1
+max = 0
+min = 0
+generar = 0
+index = 1
 
-# puts "Por favor ingresa número máximo del sorteo?"
-# max = gets.chomp.to_i
-# puts "Ahora ingresa número mínimo del sorteo?"
-# min = gets.chomp.to_i
-# puts "Finalmente ingresa cantidad de números a generar?"
-# generar = gets.chomp.to_i
+puts "Por favor ingresa número máximo del sorteo?"
+max = gets.chomp.to_i
+puts "Ahora ingresa número mínimo del sorteo?"
+min = gets.chomp.to_i
+puts "Finalmente ingresa cantidad de números a generar?"
+generar = gets.chomp.to_i
 
-# for index in 1..generar
-#     generado = rand(index)
-#     if generado >= min && generado <= max
-#         puts "Sorteo Nº#{index} #{generado}"
-#         index += 1
-#     else
-#         index += 1   
-#     end
-# end
+for index in 1..generar
+    generado = rand(index)
+    if generado >= min && generado <= max
+        puts "Sorteo Nº#{index} #{generado}"
+        index += 1
+    else
+        index += 1   
+    end
+end
 
 
 

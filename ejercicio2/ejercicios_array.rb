@@ -1,22 +1,19 @@
-# n = gets.chomp.to_i
-# # numero = Array.new
-# numeros = []
+puts "Por favor ingresa un número"
+n = gets.chomp.to_i
+# numero = Array.new
+numeros = []
+# guardar los numeros
+for i in 1..n
+    numeros << rand(0..10)
+end
+# sumar los numeros del arreglo
+suma = 0
+for numero in numeros
+    suma += numero
+end
+puts "n = #{n} => #{numeros} => suma: #{suma}"
 
-# # guardar los numeros
-# for i in 1..n
-#     numeros << rand(0..10)
-# end
-
-# # sumar los numeros del arreglo
-# suma = 0
-# for numero in numeros
-#     suma += numero
-#     print "#{numero}"
-# end
-
-# puts "suma total #{suma} "
-
-# Ejercicio 2
+Ejercicio 2
 
 puts "por favor ingresa un número"
 n = gets.chomp.to_i

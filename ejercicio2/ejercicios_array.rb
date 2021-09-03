@@ -28,15 +28,12 @@ for i in 1..n
 end
 
 suma = 0
-index = 0
 numeros.each do |numero|
     if numero%2 == 0
-        tiponum[index]="par"
-        index =+1
+        tiponum << "par"
     else
-        tiponum[index]="impar"
+        tiponum << "impar"
         suma += numero
-        index += 1
     end
 end
 puts "n= #{n} => #{numeros} => #{tiponum}"

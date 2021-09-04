@@ -80,16 +80,10 @@ min = gets.chomp.to_i
 puts "Finalmente ingresa cantidad de números a generar?"
 generar = gets.chomp.to_i
 
-generado = rand(index)
+
 for index in 1..generar
-    if generado >= min && generado <= max
         puts "Sorteo Nº#{index} #{generado}"
-        generado = rand(index)    
-    else
-        while generado < min && generado > max
-            generado = rand(index)
-        end
-    end
+        generado = rand(min..max)    
 end
 
 

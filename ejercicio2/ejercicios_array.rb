@@ -24,20 +24,23 @@
 
 # => Ganó la visita
 
-puts "Ingresa el marcador"
-marcador = []
-marcador = gets.chomp
+# usar el split
 
-if marcador[0] < marcador [2]
-    puts marcador
-    puts "ganó equipo visitante"
-elsif marcador[0] > marcador [2]
-    puts marcador
-    puts "ganó equipo local"
-elsif marcador[0] = marcador [2]
-    puts marcador
-    puts "fue un empate"
-end
+# puts "Ingresa el marcador en formato l-v"
+# marcador = []
+# marcador = gets.chomp.split('-')
+# # largo = marcador.length
+
+# if marcador[0] < marcador [1]
+#     puts marcador
+#     puts "ganó equipo visitante"
+# elsif marcador[0] > marcador [1]
+#     puts marcador
+#     puts "ganó equipo local"
+# elsif marcador[0] = marcador [1]
+#     puts marcador
+#     puts "fue un empate"
+# end
 
 
 # Ejercicio 2
@@ -79,22 +82,101 @@ end
 # => ["impar", "impar", "impar", "par", "par", "par", "par", "impar", "impar", "par"]
 
 
-puts "por favor ingresa un número"
-n = gets.chomp.to_i
-numeros = []
-tiponum = []
-# guardar los numeros
-for i in 1..n
-    numeros << rand(0..10)
-end
+# puts "por favor ingresa un número"
+# n = gets.chomp.to_i
+# numeros = []
+# tiponum = []
+# # guardar los numeros
+# for i in 1..n
+#     numeros << rand(0..10)
+# end
 
-suma = 0
-numeros.each do |numero|
-    if numero%2 == 0
-        tiponum << "par"
-    else
-        tiponum << "impar"
-        suma += numero
-    end
-end
-puts "n= #{n} => #{numeros} => #{tiponum}"
+# suma = 0
+# numeros.each do |numero|
+#     if numero%2 == 0
+#         tiponum << "par"
+#     else
+#         tiponum << "impar"
+#         suma += numero
+#     end
+# end
+# puts "n= #{n} => #{numeros} => #{tiponum}"
+
+# Ejercicio 4
+
+# usar el split
+
+# Ejercicio 5
+
+
+# Permitir ingresar al usuario por consola nombres de personas, 
+# estos nombres deben mantener el siguiente formato:
+
+# # Si el nombre comienza por una vocal, el nombre
+#  debe comenzar el nombre con mayúscula
+# Si el nombre comienza por una consonante, el nombre de 
+# estar todo en mayúscula
+
+# Para mostrar cómo va la lista el usuario puede escribir 
+# la palabra “mostrar” y para salir debe escribir la palabra “salir”. Al final 
+# se debe imprimir en pantalla todos los nombres de la lista y el total de 
+# nombres agregados.
+
+# # => ingrese un nombre para agregar a la lista: andrea => agregando: Andrea 
+# carlos => agregando: CARLOS mostrar => Andrea - CARLOS salir => Lista final: 
+# Andrea - CARLOS => 2 nombres agregados
+
+# solucion 1 
+
+# print "=>Ingresa un nombre"
+# nombre = []
+# print "agregando: #{nombre}"
+# vocales = ['a','e','i','o','u']
+
+# while nombre != "salir"
+# nombre = gets.chomp
+# for vocal in vocales
+#     if nombre[0].downcase == vocal
+#         nombre = nombre.capitalize
+#     end
+# # else
+# # nombre = nombre.upcase
+# print nombre[0]
+# end
+# print "=> Lista Final: #{nombre}"
+
+
+    # if nombre[0] == "a" || nombre[0] == "e" || nombre[0] == "i" || nombre[0] == "o" || nombre[0] == "u"
+        # nombre = nombre.capitalize
+
+# solucion 2
+
+# Nombre de personas
+# nombre =""
+# letra =""
+# lista =[]
+
+# while nombre != "salir"
+# puts "Escriba el Nombre de una Persona, escriba <<Mostrar>> para ver la lista y <<Salir>> para terminar"
+# nombre=gets.chomp
+# letra = nombre.split("")
+# if nombre == "mostrar"
+# lista.each do |n|
+# print " #{n} - "
+# end
+# puts ""
+# puts ""
+# elsif letra[0] == "a" or letra[0] == "e" or letra[0] == "i" or letra[0] == "o" or letra[0] == "u"
+# puts "=> agregando: #{nombre.capitalize!}"
+# lista.push(nombre)
+# elsif nombre != "salir"
+# puts "=> agregando: #{nombre.upcase!}"
+# lista.push(nombre)
+# end
+# end
+# print "lista Final:"
+# lista.each do |i|
+# print "#{i} - "
+# end
+# puts ""
+# print "#{lista.count} nombres agregados"

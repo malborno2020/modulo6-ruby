@@ -189,54 +189,55 @@
 
 # Metodo ii Suma interior
 
-def sumaint(digitos)
-    suma = 0
-    arreglo=digitos.to_s.split
-    suma = arreglo.each do |n|
-        arreglo[n].to_i
-    end
-    return suma
-end
+# def sumaint(digitos)
+#     suma = 0
+#     arreglo = digitos.to_s.chars
+#     for digito in arreglo
+#         dig = digito.to_i
+#         suma += dig
+#     end
+#     return suma
+# end
 
 # probando metodo sumaint
-print sumaint(21)
-puts
-puts
-print sumaint(0)
-puts
-puts
-print sumaint(-1)
-
-
-
+# print sumaint(21)
+# puts
+# puts
+# print sumaint(0)
+# puts
+# puts
+# print sumaint(-1)
+# puts
+# puts
+# print sumaint(0123)
+# puts
+# puts
+# print sumaint(551)
 
 
 #         Método iii capicua?
-#         print "Ingrese la palabra que desea evaluar: "
+def capicua (n)
+    cont=0
+    arreglo = n.to_s.chars
+    rev = arreglo.length - 1
+    for digito in arreglo
+        if digito.to_i== arreglo[rev]
+        cont += 1
+        end
+        rev -= 1
+    end
+    if arreglo.length == cont
 
-# texto = gets().chomp("\n")
+        return "El número invertido es: #{n.to_s.reverse}. El número ES capicúa"
+    else
+        return "El número invertido es: #{n.to_s.reverse}. El número NO es capicúa"
+    end
+end
 
-# igual, aux = 0, texto.length - 1
-
-# 0.step texto.length - 1 do |n|
-
-# if texto[n].downcase == texto[aux].downcase
-
-# igual += 1
-
-# end
-
-# aux -= 1
-
-# end
-
-# if texto.length == igual
-
-# puts "La palabra ingresada si es palíndromo"
-
-# else
-
-# puts "La palabra ingresada no es palíndromo"
-
-# end
-
+print capicua(52149)
+puts
+puts
+print capicua(52125)
+puts
+puts
+print capicua(5225)

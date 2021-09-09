@@ -201,7 +201,7 @@ def sumaint(digitos)
         dig = digito.to_i
         suma += dig
     end
-    if negativo
+    if negativo == true
         suma *= -1
     end
     return suma
@@ -252,19 +252,19 @@ while flag != "salir"
     opcion = gets.chomp
     if opcion == "1"
         puts "Ingrese el monto a girar"
-        monto = gets.chomp
+        monto = gets.chomp.to_i
         saldo = 120
-        giro(monto,saldo)
+        print giro(monto,saldo)
     elsif opcion == "2"
         puts "Ingrese un número"
         n = gets.chomp
-        sumaint(n)
+        print "La suma de los digitos es #{sumaint(n)}"
     elsif opcion == "3"
         puts "Ingrese un número"
         numero = gets.chomp
-        capicua(numero)
-    # else
-        # puts "Opción no disponible"
+        print capicua(numero)
+    else
+        puts "Opción no disponible"
     end
     puts "¿Desea salir? y/n?"
     exit = gets.chomp

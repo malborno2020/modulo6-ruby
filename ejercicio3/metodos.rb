@@ -168,15 +168,16 @@
 # Ejercicio 3 Todo en uno solo
 
 # Metodo i. Bancos
-# def giro(monto,saldo)
-#     comision = 0.5
-#     if monto <= saldo
-#         if monto%5 == 0
-#             saldo=saldo-monto-comision
-#         end
-#     end
-#     return saldo
-# end
+
+def giro(monto,saldo)
+    comision = 0.5
+    if monto%5 == 0 && monto+comision <= saldo
+        saldo = saldo-monto-comision
+    else
+        puts "Su saldo es insuficiente o el monto a girar no es multiplo de 5"
+    end
+    return saldo
+end
 
 # probando metodo giro
 # print giro(30,120)
@@ -189,55 +190,88 @@
 
 # Metodo ii Suma interior
 
-# def sumaint(digitos)
-#     suma = 0
-#     arreglo = digitos.to_s.chars
-#     for digito in arreglo
-#         dig = digito.to_i
-#         suma += dig
-#     end
-#     return suma
-# end
+def sumaint(digitos)
+    suma = 0
+    if digitos.to_i < 0
+      digitos *= -1
+      negativo = true
+    end
+    arreglo = digitos.to_s.chars
+    for digito in arreglo
+        dig = digito.to_i
+        suma += dig
+    end
+    if negativo
+        suma *= -1
+    end
+    return suma
+end
 
 # probando metodo sumaint
-# print sumaint(21)
-# puts
-# puts
-# print sumaint(0)
-# puts
-# puts
-# print sumaint(-1)
-# puts
-# puts
-# print sumaint(0123)
-# puts
-# puts
-# print sumaint(551)
+# 
 
+#         Método iii capicua
 
-#         Método iii capicua?
 def capicua (n)
     cont=0
     arreglo = n.to_s.chars
     rev = arreglo.length - 1
     for digito in arreglo
-        if digito.to_i== arreglo[rev]
+        if digito.to_i == arreglo[rev].to_i
         cont += 1
         end
         rev -= 1
     end
     if arreglo.length == cont
-
-        return "El número invertido es: #{n.to_s.reverse}. El número ES capicúa"
+        return "=> #{n.to_s.reverse} ES capicúa"
     else
-        return "El número invertido es: #{n.to_s.reverse}. El número NO es capicúa"
+        return "=> #{n.to_s.reverse} NO ES capicúa"
     end
 end
 
-print capicua(52149)
-puts
-puts
-print capicua(52125)
-puts
-puts
-print capicua(5225)
+# probando método capicúa
+# print capicua(52149)
+# puts
+# puts
+# print capicua(52125)
+# puts
+# puts
+# print capicua(5225)
+
+# codigo del Menu Principal
+
+puts "Menu Todo en uno Solo".center(50, "=")
+flag = ""
+while flag != "salir"
+    puts "Para Banco ingrese 1"
+    puts "Para Suma interior ingrese 2"
+    puts "Para Capicúa ingrese 3"
+    puts
+    puts
+    puts "Ingrese la opción deseada"
+    opcion = gets.chomp
+    if opcion == "1"
+        puts "Ingrese el monto a girar"
+        monto = gets.chomp
+        saldo = 120
+        giro(monto,saldo)
+    elsif opcion == "2"
+        puts "Ingrese un número"
+        n = gets.chomp
+        sumaint(n)
+    elsif opcion == "3"
+        puts "Ingrese un número"
+        numero = gets.chomp
+        capicua(numero)
+    # else
+        # puts "Opción no disponible"
+    end
+    puts "¿Desea salir? y/n?"
+    exit = gets.chomp
+    if exit == "y"
+        flag = "salir"
+    end
+end
+
+
+

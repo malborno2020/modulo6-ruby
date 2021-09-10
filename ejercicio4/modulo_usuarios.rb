@@ -11,6 +11,9 @@ module ModuloUsuarios
                 usuarios_gustos = generar_usuarios_con_gustos(tamano)
                 impresiones_con_gustos(usuarios_gustos)
                 puts
+            elsif opcion == "3"
+                personajes_duna = generar_duna(tamano)
+                impresiones_de_duna(personajes_duna)
             else
                 puts "Opción no disponible"
             end
@@ -30,5 +33,13 @@ module ModuloUsuarios
             usuarios << {nombre: Faker::Name.name, email: Faker::Internet.email, password:Faker::Internet.password }
         end
         return usuarios
+    end
+
+    def generar_duna(n)
+        dune = []
+        for i in 1..n
+            dune << {nombre: Faker::Books::Dune.character, planet: Faker::Books::Dune.planet, quote:Faker::Books::Dune.quote }
+        end
+        return dune
     end
 end

@@ -38,4 +38,22 @@ require 'faker'
         }
     end
 
+    def impresiones_de_duna(arreglo_duna)
+        espacio = 2
+        cuenta_letras = arreglo_duna.map{ |usuario| usuario[:nombre].length}
+        align_character = cuenta_letras.max + espacio
+
+        cuenta_letras_planet = arreglo_duna.map{ |usuario| usuario[:planet].length}
+        align_planet = cuenta_letras_planet.max + espacio
+
+        cuenta_letras_quote = arreglo_duna.map{ |usuario| usuario[:quote].length}
+        align_quote = cuenta_letras_quote.max + espacio
+
+        puts "Personaje".ljust(align_character, "-") + " |" + "Planeta".ljust(align_planet, "-") + " | " + "Frase".ljust(align_quote,"-")
+        puts
+        arreglo_duna.each{ |elemento|
+        puts "#{elemento[:character].ljust(align_character, ".")} |#{elemento[:planet].ljust(align_planet, ".")} |#{elemento[:quote].ljust(align_quote, ".")}"
+        }
+    end
+
 end     

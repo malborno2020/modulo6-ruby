@@ -193,7 +193,8 @@ end
 def sumaint(digitos)
     suma = 0
     if digitos.to_i < 0
-      digitos *= -1
+        digitos = digitos.to_i
+      digitos*= -1
       negativo = true
     end
     arreglo = digitos.to_s.chars

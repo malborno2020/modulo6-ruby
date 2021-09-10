@@ -12,4 +12,8 @@ usuarios_datos = generar_usuarios_con_datos(5)
 impresiones_con_correo(usuarios_datos)
 puts
 
+usuarios_gustos = generar_usuarios_con_gustos(5)
+impresiones_con_gustos(usuarios_gustos)
+puts
+
 #print saludar(Manuel)

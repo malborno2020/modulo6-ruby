@@ -16,7 +16,7 @@ require 'faker'
         puts "Nombre".ljust(align_nombre) + " |" + "Email".ljust(align_correo)+ " | " + "Password"
         puts
         arreglo_usuarios.each{ |usuario|
-        puts "#{usuario[:nombre].ljust(align_nombre)} |#{usuario[:email].ljust(align_correo)} | #{usuario[:password].rjust(10)}"
+        puts "#{usuario[:nombre].ljust(align_nombre)} |#{usuario[:email].ljust(align_correo)} | #{usuario[:password].ljust(5)}"
         }
     end
 
@@ -31,7 +31,7 @@ require 'faker'
         cuenta_letras_pelicula = arreglo_usuarios.map{ |usuario| usuario[:pelicula].length}
         align_pelicula = cuenta_letras_pelicula.max + espacio
 
-        puts "Nombre".ljust(align_nombre) + " |" + "Juego".ljust(align_juego) + " | " + "Película".ljust(align_pelicula)
+        puts "Nombre".ljust(align_nombre, "-") + " |" + "Juego".ljust(align_juego, "-") + " | " + "Película".ljust(align_pelicula,"-")
         puts
         arreglo_usuarios.each{ |usuario|
         puts "#{usuario[:nombre].ljust(align_nombre, ".")} |#{usuario[:juego].ljust(align_juego, ".")} | #{usuario[:pelicula].ljust(align_pelicula, ".")}"

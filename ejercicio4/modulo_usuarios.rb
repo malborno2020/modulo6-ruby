@@ -1,4 +1,5 @@
-require 'faker'
+require 'faker' #Enlazar o llamar a la gema Faker
+
 module ModuloUsuarios
 
     def selecciona(opcion,tamano)
@@ -38,7 +39,7 @@ module ModuloUsuarios
     def generar_duna(n)
         dune = []
         for i in 1..n
-            dune << {nombre: Faker::Books::Dune.character, planet: Faker::Books::Dune.planet, quote:Faker::Books::Dune.quote }
+            dune << {character: Faker::Books::Dune.character, planet: Faker::Books::Dune.planet, quote:Faker::Books::Dune.quote }
         end
         return dune
     end

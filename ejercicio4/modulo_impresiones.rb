@@ -31,7 +31,7 @@ require 'faker'
         cuenta_letras_pelicula = arreglo_usuarios.map{ |usuario| usuario[:pelicula].length}
         align_pelicula = cuenta_letras_pelicula.max + espacio
 
-        puts "Nombre".ljust(align_nombre, "-") + " |" + "Juego".ljust(align_juego, "-") + " | " + "Película".ljust(align_pelicula,"-")
+        puts "Nombre".ljust(align_nombre) + " |" + "Juego".ljust(align_juego) + " | " + "Película".ljust(align_pelicula)
         puts
         arreglo_usuarios.each{ |usuario|
         puts "#{usuario[:nombre].ljust(align_nombre, ".")} |#{usuario[:juego].ljust(align_juego, ".")} | #{usuario[:pelicula].ljust(align_pelicula, ".")}"
@@ -40,20 +40,20 @@ require 'faker'
 
     def impresiones_de_duna(arreglo_duna)
         espacio = 2
-        cuenta_letras = arreglo_duna.map{ |usuario| usuario[:nombre].length}
+        cuenta_letras = arreglo_duna.map{ |elemento| elemento[:character].length}
         align_character = cuenta_letras.max + espacio
 
-        cuenta_letras_planet = arreglo_duna.map{ |usuario| usuario[:planet].length}
+        cuenta_letras_planet = arreglo_duna.map{ |elemento| elemento[:planet].length}
         align_planet = cuenta_letras_planet.max + espacio
 
-        cuenta_letras_quote = arreglo_duna.map{ |usuario| usuario[:quote].length}
+        cuenta_letras_quote = arreglo_duna.map{ |elemento| elemento[:quote].length}
         align_quote = cuenta_letras_quote.max + espacio
 
-        puts "Personaje".ljust(align_character, "-") + " |" + "Planeta".ljust(align_planet, "-") + " | " + "Frase".ljust(align_quote,"-")
-        puts
+    
         arreglo_duna.each{ |elemento|
-        puts "#{elemento[:character].ljust(align_character, ".")} |#{elemento[:planet].ljust(align_planet, ".")} |#{elemento[:quote].ljust(align_quote, ".")}"
+        puts "Personaje".ljust(15,"-") + "#{elemento[:character].ljust(align_character)}"
+        puts "Planeta".ljust(15, "-") + "#{elemento[:planet].ljust(align_planet)}"
+        puts "Frase".ljust(15,"-") + "#{elemento[:quote].ljust(align_quote)}"
         }
     end
-
 end     

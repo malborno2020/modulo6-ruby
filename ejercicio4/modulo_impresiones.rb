@@ -57,3 +57,17 @@ require 'faker'
         }
     end
 end     
+
+def imprimir_txt(arreglo)
+    File.open('arreglo.txt',"w"){|archivo|
+        archivo.write(arreglo)
+        puts "\n"
+    }
+end    
+
+def imprimir_csv(arreglo)
+    File.open('arreglo.csv',"w"){|archivo|
+        archivo.write(arreglo)
+        puts "\n"
+    }
+end    

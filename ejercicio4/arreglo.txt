@@ -1,0 +1,11 @@
+{:nombre=>"Prof. Chi Mraz", :email=>"rafael@fahey.org", :password=>"EdIp4TlQwF"}
+{:nombre=>"Rocco Hand", :email=>"virgilio.sanford@goldner.co", :password=>"0JpW19jJzWzS"}
+{:nombre=>"Gale Runolfsdottir CPA", :email=>"madie@rohan-schmeler.info", :password=>"Ve4NfEnIs3EnN7s9"}
+{:nombre=>"Janay Effertz", :email=>"horacio.parisian@windler.io", :password=>"GhZfBqQy60TrU"}
+{:nombre=>"Zenia Kemmer", :email=>"miguel.nitzsche@blanda.com", :password=>"XhSvRdW4oHt00"}
+{:nombre=>"Ms. Everett Donnelly", :email=>"leon.jenkins@harris.biz", :password=>"7WrQ7jD5"}
+{:nombre=>"Bernadine Cassin", :email=>"chadwick.blick@armstrong.co", :password=>"L0aSzUqM"}
+{:nombre=>"Laverne Rowe", :email=>"rudolf.spinka@jast.org", :password=>"KqMnGz9O8rZzPz"}
+{:nombre=>"Marco Veum", :email=>"kenna@macgyver.org", :password=>"TsRbPa2AyVt55E"}
+{:nombre=>"Roxanna Wisozk CPA", :email=>"millie.boyle@johns-weissnat.org", :password=>"KzAgG7tDiWe189X7"}
+

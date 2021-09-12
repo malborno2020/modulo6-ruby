@@ -59,15 +59,15 @@ require 'faker'
 end     
 
 def imprimir_txt(arreglo)
-    File.open('arreglo.txt',"w"){|archivo|
-        archivo.write(arreglo)
+    File.open('/Users/manuel/modulo6/ejercicio4/arreglo.txt',"w"){|archivo|
+        archivo.puts(arreglo,"\n")
         puts "\n"
     }
 end    
 
 def imprimir_csv(arreglo)
-    File.open('arreglo.csv',"w"){|archivo|
-        archivo.write(arreglo)
-        puts "\n"
+    File.open('/Users/manuel/modulo6/ejercicio4/arreglo.csv',"w"){|archivo|
+        archivo.puts(arreglo,"\n")
+        
     }
 end    

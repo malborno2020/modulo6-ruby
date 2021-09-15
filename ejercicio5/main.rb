@@ -20,7 +20,7 @@ puts monstruo1
 puts
 puts monstruo2
 
-# quien_gana(monstruo1,monstruo2)
+monstruo1.quien_gana(monstruo1,monstruo2)
 
 # require_relative 'monstruo'
 

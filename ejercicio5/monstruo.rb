@@ -11,8 +11,11 @@ class Monstruo
         @ataque = ataque
     end
 
-    def atacar (monstruo1,monstruo2)
+    def quien_ataca
         quien_ataca = rand(1..2)
+    end
+
+    def atacar (monstruo1,monstruo2)
         if quien_ataca == 1 
             monstruo2.vida -= monstruo1.ataque
         else
@@ -24,6 +27,7 @@ class Monstruo
         if monstruo1.vida <= 0
             puts
             puts "#{monstruo2.nombre} ha aniquilado #{monstruo1.nombre}"
+
         elsif monstruo2.vida <= 0
             puts
             puts "#{monstruo1.nombre} ha aniquilado #{monstruo2.nombre}"

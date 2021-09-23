@@ -29,8 +29,10 @@ module Menu
             puts "Imprimir estado actual de la cuenta ingrese 3"
             puts "Imprimir historial de movimientos ingrese 4"
             opcion = gets.chomp
+            historial = {}
             if opcion <= 5
                 desplegar(opcion)
+                build_historial(saldo,deposito,giro)
             else
                 puts "Opción invalida. Por favor ingrese una opción válida"
                 opcion = gets.chomp

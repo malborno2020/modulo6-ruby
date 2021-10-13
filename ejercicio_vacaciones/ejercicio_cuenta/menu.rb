@@ -1,6 +1,7 @@
-module Menu
+require_relative 'cuenta'
 
-    require_relative 'cuenta'
+
+   
 
     class Menu
         attr_accessor :opcion
@@ -39,4 +40,3 @@ module Menu
             end
         end
     end
-end

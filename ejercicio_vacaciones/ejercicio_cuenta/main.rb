@@ -1,7 +1,6 @@
-module Main
+
     require_relative 'menu'
 
-    include Menu
 
-    comenzar
-end
+    menu = Menu.new
+    menu.comenzar
